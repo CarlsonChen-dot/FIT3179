@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Earthquakes of magnitude 4 or large between 4 Oct 2020 and 10 Oct 2020",
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/JSON/uk.json",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/JSON/uk.json",
+          "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+        },
+        "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/data/uk_universities.csv"
+        },
+        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "encoding": {
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "size": {
+            "field": "UK_rank",
+            "type": "quantitative",
+            "title": "University Ranking",
+            "scale": {"domain": [131, 1]}
+          },
+          "color": {
+            "field": "UG_average_fees_(in_pounds)",
+            "type": "quantitative",
+            "title": "Undergraduate Average Fees",
+            "scale": {"scheme": "reds"}
+          }
+        }
+      }
+    ]
+  }
