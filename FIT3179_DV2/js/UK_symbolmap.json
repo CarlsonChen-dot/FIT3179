@@ -7,7 +7,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/JSON/ne_10m_admin_1_states_provinces.json",
+          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/js/ne_10m_admin_1_states_provinces.json",
           "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
