@@ -7,7 +7,7 @@
         "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
     },
     "transform": [
-        {"calculate": "datum.International_students(%) * 100", "as": "International_Students_Percentage"}
+        {"calculate": "datum.International_students_percentage * 100", "as": "International_Students_Percentage"}
     ],
     "mark": "circle",
     "encoding": {
