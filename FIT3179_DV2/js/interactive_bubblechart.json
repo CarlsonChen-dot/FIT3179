@@ -2,22 +2,26 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 400,
-    "title": "World Rank vs. CWUR Score with Estimated Living Cost",
+    "title": "UK Rank vs. CWUR Score",
     "data": {
         "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
     },
+    "transform": [
+        {"calculate": "datum.International_students(%) * 100", "as": "International_Students_Percentage"}
+    ],
     "mark": "circle",
     "encoding": {
         "x": {
-            "field": "World_rank",
+            "field": "UK_rank",
             "type": "quantitative",
             "title": "World Rank"
+            
         },
         "y": {
             "field": "CWUR_score",
             "type": "quantitative",
             "scale": {
-                "type": "log",
+                "type": "linear",
                 "domain": [
                     60,
                     100
@@ -28,16 +32,37 @@
             "field": "Region",
             "type": "nominal"
         },
-        "size": {
-            "field": "Estimated_cost_of_living_per_year_(in_pounds)",
-            "type": "quantitative", 
-            "scale": {
-                "type": "threshold",
-                "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
-                "range": [10, 50, 150, 200, 300, 400]
-                },
-                "legend": {"format": ".1s"}
-                 
-        }
+        
+        "tooltip": [
+            {
+                "field": "University_name",
+                "type": "nominal"
+            },
+            {
+                "field": "UK_rank",
+                "type": "quantitative",
+                "format": ","
+            },
+            {
+                "field": "World_rank",
+                "type": "quantitative",
+                "format": ","
+            },
+            {
+                "field": "CWUR_score",
+                "type": "quantitative",
+                "format": ","
+            },
+            {
+                "field": "Estimated_cost_of_living_per_year_(in_pounds)",
+                "type": "quantitative",
+                "format": ","
+            },
+            {
+                "field": "International_Students_Percentage",
+                "type": "quantitative",
+                "format": ".2f"
+            }
+        ]
     }
 }
