@@ -30,7 +30,7 @@
         },
         "color": {
             "field": "Region",
-            "type": "nominal"
+            "type": "nominal"  
         },
         
         "tooltip": [
@@ -61,7 +61,8 @@
             {
                 "field": "International_Students_Percentage",
                 "type": "quantitative",
-                "format": ".2f"
+                "format": ".2f",
+                "title": "International Students Percentage (%)"
             }
         ]
     }
