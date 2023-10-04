@@ -21,7 +21,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/data/uk_universities.csv"
+          "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
