@@ -94,8 +94,39 @@
                 },
                 "color": {
                     "field": "Region",
-                    "type": "nominal"
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "East Midlands",
+                            "East of England",
+                            "London",
+                            "North East England",
+                            "North West England",
+                            "Northern Ireland",
+                            "Scotland",
+                            "South East England",
+                            "South West England",
+                            "Wales",
+                            "West Midlands",
+                            "Yorkshire and the Humber"
+                        ],
+                        "range": [
+                            "#1f77b4",
+                            "#ff7f0e",
+                            "#2ca02c",
+                            "#d62728",
+                            "#9467bd",
+                            "#8c564b",
+                            "#e377c2",
+                            "#7f7f7f",
+                            "#bcbd22",
+                            "#17becf",
+                            "#ff0000",
+                            "#0000ff"
+                        ]
+                    }
                 },
+                "size":{ "value": 100},
                 "opacity": {
                     "value": 1
                     },
