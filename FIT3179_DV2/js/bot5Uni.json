@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A bar graph showing the top 5 universities by UK rank.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+    },
+    "transform": [
+      {
+        "window": [
+          {
+            "op": "rank",
+            "as": "rank"
+          }
+        ],
+        "sort": [
+          {
+            "field": "UK_rank",
+            "order": "ascending"
+          }
+        ]
+      },
+      {
+        "filter": "datum.UK_rank >=127"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "UK_rank",
+        "type": "quantitative",
+        "title": "UK rank"
+      },
+      "y": {
+        "field": "University_name",
+        "type": "nominal",
+        "sort": {"field": "rank", "order": "ascending"}
+      }
+    }
+  }
