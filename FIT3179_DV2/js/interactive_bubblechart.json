@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 400,
-    "title": "UK Rank vs. CWUR Score",
+    "title": "Student Satisfaction",
     "data": {
         "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
     },
@@ -73,11 +73,23 @@
                 "x": {
                     "field": "Estimated_cost_of_living_per_year_(in_pounds)",
                     "type": "quantitative",
-                    "title": "Cost"
+                    "title": "Cost",
+                    "scale": {
+                        "domain": [
+                            4000,
+                            16000
+                        ]
+                    }
                 },
                 "y": {
                     "field": "Students_Satisfaction_Percentage",
-                    "type": "quantitative"
+                    "type": "quantitative",
+                    "scale": {
+                        "domain": [
+                            60,
+                            90
+                        ]
+                    }
                 },
                 "color": {
                     "field": "Region",
@@ -151,31 +163,6 @@
                         "title": "International Students Percentage (%)"
                     }
                 ]
-            }
-        },
-        {
-            "mark": {
-                "type": "text",
-                "align": "left",
-                "baseline": "bottom",
-                "fontSize": 10,
-                "fontStyle": "italic"
-            },
-            "encoding": {
-                "text": {
-                    "field": "University_name",
-                    "type": "nominal"
-                },
-                "color": {
-                    "value": "black"
-                },
-                "opacity": {
-                    "condition": {
-                        "test": "datum.CWUR_score > 94 || datum.CWUR_score < 66",
-                        "value": 1
-                    },
-                    "value": 0
-                }
             }
         }
     ]
