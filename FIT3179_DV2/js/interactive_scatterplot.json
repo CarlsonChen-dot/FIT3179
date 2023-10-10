@@ -1,0 +1,157 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "UK Rank vs. CWUR Score",
+    "data": {
+        "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+    },
+    "vconcat": [
+        {
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "brush",
+                        "title": "Region",
+                        "field": "Region",
+                        "type": "nominal",
+                        "scale": {
+                            "domain": [
+                                "East Midlands",
+                                "East of England",
+                                "London",
+                                "North East England",
+                                "North West England",
+                                "Northern Ireland",
+                                "Scotland",
+                                "South East England",
+                                "South West England",
+                                "Wales",
+                                "West Midlands",
+                                "Yorkshire and the Humber"
+                            ],
+                            "range": [
+                                "#1f77b4",
+                                "#ff7f0e",
+                                "#2ca02c",
+                                "#d62728",
+                                "#9467bd",
+                                "#8c564b",
+                                "#e377c2",
+                                "#7f7f7f",
+                                "#bcbd22",
+                                "#17becf",
+                                "#ff0000",
+                                "#0000ff"
+                            ]
+                        }
+                    },
+                    "value": "lightgray"
+                },
+                "size": {
+                    "value": 80
+                },
+                "opacity": {
+                    "value": 1
+                },
+                "tooltip": [
+                    {
+                        "field": "University_name",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "UK_rank",
+                        "type": "quantitative",
+                        "format": ","
+                    },
+                    {
+                        "field": "World_rank",
+                        "type": "quantitative",
+                        "format": ","
+                    },
+                    {
+                        "field": "CWUR_score",
+                        "type": "quantitative",
+                        "format": ","
+                    }
+                ],
+                "x": {
+                    "field": "UK_rank",
+                    "type": "quantitative",
+                    "title": "UK rank"
+                },
+                "y": {
+                    "title": "CWUR score",
+                    "field": "CWUR_score",
+                    "scale": {
+                        "type": "linear",
+                        "domain": [
+                            60,
+                            100
+                        ]
+                    },
+                    "type": "quantitative"
+                }
+            },
+            "width": 600,
+            "height": 400,
+            "mark": "circle",
+            "params": [
+                {
+                    "name": "brush",
+                    "select": {
+                        "type": "interval",
+                        "encodings": [
+                            "x"
+                        ]
+                    }
+                }
+            ],
+            "transform": [
+                {
+                    "filter": {
+                        "param": "click"
+                    }
+                }
+            ]
+        },
+        {
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "click",
+                        "field": "Region"
+                    },
+                    "value": "lightgray"
+                },
+                "x": {
+                    "aggregate": "count",
+                    "title": "Number of Universities"
+                },
+                "y": {
+                    "title": "Region",
+                    "field": "Region"
+                }
+            },
+            "width": 600,
+            "height": 150,
+            "mark": "bar",
+            "params": [
+                {
+                    "name": "click",
+                    "select": {
+                        "type": "point",
+                        "encodings": [
+                            "color"
+                        ]
+                    }
+                }
+            ],
+            "transform": [
+                {
+                    "filter": {
+                        "param": "brush"
+                    }
+                }
+            ]
+        }
+    ]
+}
