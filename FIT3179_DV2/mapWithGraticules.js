@@ -8,17 +8,17 @@ vegaEmbed("#bubble", vg_2)
     .then(function (result) {})
     .catch(console.error);
     
-var vg_3 = "./js/interactive_bubblechart.json";
-vegaEmbed("#bubble", vg_3)
+var vg_3 = "./js/bot5Uni.json";
+vegaEmbed("#bot5", vg_3)
     .then(function (result) {})
     .catch(console.error);
 
-var vg_4 = "./js/interactive_bubblechart.json";
-vegaEmbed("#bubble", vg_4)
+var vg_4 = "./js/top5Uni.json";
+vegaEmbed("#top5", vg_4)
     .then(function (result) {})
     .catch(console.error);
 
-var vg_5 = "./js/interactive_bubblechart.json";
-vegaEmbed("#bubble", vg_5)
+var vg_5 = "./js/interactive_scatterplot.json";
+vegaEmbed("#scatter", vg_5)
     .then(function (result) {})
     .catch(console.error);
