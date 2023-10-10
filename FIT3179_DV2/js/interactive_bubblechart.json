@@ -11,10 +11,11 @@
             "calculate": "datum.International_students_percentage * 100",
             "as": "International_Students_Percentage"
         },
-        {"filter": "Region_selection == null || datum.Region == Region_selection"}
-
+        {
+            "filter": "Region_selection == null || datum.Region == Region_selection"
+        }
     ],
-    "params":[
+    "params": [
         {
             "name": "Region_selection",
             "bind": {
@@ -34,7 +35,7 @@
                     "West Midlands",
                     "Yorkshire and the Humber"
                 ],
-                "labels":[
+                "labels": [
                     "Show All",
                     "East Midlands",
                     "East of England",
@@ -48,8 +49,7 @@
                     "Wales",
                     "West Midlands",
                     "Yorkshire and the Humber"
-                    ],
-                    
+                ],
                 "name": "Region: "
             }
         }
@@ -126,10 +126,12 @@
                         ]
                     }
                 },
-                "size":{ "value": 100},
+                "size": {
+                    "value": 100
+                },
                 "opacity": {
                     "value": 1
-                    },
+                },
                 "tooltip": [
                     {
                         "field": "University_name",
@@ -165,28 +167,29 @@
             }
         },
         {
-            "mark":{
-                "type":"text",
-                "align":"left",
-                "baseline":"bottom",
-                "fontSize":10,
-                "fontStyle":"italic"
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "bottom",
+                "fontSize": 10,
+                "fontStyle": "italic"
             },
             "encoding": {
                 "text": {
                     "field": "University_name",
                     "type": "nominal"
                 },
-                "color":{"value":"black"},
-                "opacity":{
-                    "condition":{
-                        "test":"datum.CWUR_score > 94 || datum.CWUR_score < 66",
-                        "value":1
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum.CWUR_score > 94 || datum.CWUR_score < 66",
+                        "value": 1
                     },
-                    "value":0
+                    "value": 0
                 }
             }
         }
-        
     ]
 }
