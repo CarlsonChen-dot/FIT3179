@@ -93,7 +93,7 @@
             },
             "width": 600,
             "height": 400,
-            "mark": "circle",
+            "mark": "point",
             "params": [
                 {
                     "name": "brush",
