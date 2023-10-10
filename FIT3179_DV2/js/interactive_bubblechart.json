@@ -8,8 +8,8 @@
     },
     "transform": [
         {
-            "calculate": "datum.International_students_percentage * 100",
-            "as": "International_Students_Percentage"
+            "calculate": "datum.Student_satisfaction_percentage * 100",
+            "as": "Students_Satisfaction_Percentage"
         },
         {
             "filter": "Region_selection == null || datum.Region == Region_selection"
@@ -56,20 +56,14 @@
     ],
     "encoding": {
         "x": {
-            "field": "UK_rank",
+            "field": "Estimated_cost_of_living_per_year_(in_pounds)",
             "type": "quantitative",
-            "title": "UK rank"
+            "title": "Cost"
         },
         "y": {
-            "field": "CWUR_score",
-            "type": "quantitative",
-            "scale": {
-                "type": "linear",
-                "domain": [
-                    60,
-                    100
-                ]
-            }
+            "field": "Students_Satisfaction_Percentage",
+            "type": "quantitative"
+            
         }
     },
     "layer": [
@@ -77,20 +71,13 @@
             "mark": "circle",
             "encoding": {
                 "x": {
-                    "field": "UK_rank",
+                    "field": "Estimated_cost_of_living_per_year_(in_pounds)",
                     "type": "quantitative",
-                    "title": "UK rank"
+                    "title": "Cost"
                 },
                 "y": {
-                    "field": "CWUR_score",
-                    "type": "quantitative",
-                    "scale": {
-                        "type": "linear",
-                        "domain": [
-                            60,
-                            100
-                        ]
-                    }
+                    "field": "Students_Satisfaction_Percentage",
+                    "type": "quantitative"
                 },
                 "color": {
                     "field": "Region",
