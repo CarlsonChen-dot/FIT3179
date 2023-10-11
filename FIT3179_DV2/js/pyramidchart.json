@@ -1,75 +1,75 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A pyramid-like chart comparing UG and PG average fees for different universities.",
-    "data": {
-      "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
-    },
-    "transform": [],
-    "spacing": 0,
-    "hconcat": [
-      {
-        "transform": [],
-        "title": "Undergraduate",
-        "mark": "bar",
-        "encoding": {
-          "y": {
-            "field": "University_name",
-            "type": "ordinal",
-            "axis": null,
-            "sort": "descending"
-          },
-          "x": {
-            "aggregate": "sum",
-            "field": "UG_average_fees_(in_pounds)",
-            "title": "Average UG Fees",
-            "axis": {"format": "s"},
-            "sort": "descending"
-          },
-          "color": {
-            "field": "University_name",
-            "scale": {"scheme": "category20c"},
-            "legend": null
-          }
-        }
-      },
-      {
-        "width": 20,
-        "view": {"stroke": null},
-        "mark": {
-          "type": "text",
-          "align": "center"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A pyramid-like chart comparing UG and PG average fees for different universities.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+  },
+  "transform": [],
+  "spacing": 0,
+  "hconcat": [
+    {
+      "transform": [],
+      "title": "Undergraduate",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "University_name",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
         },
-        "encoding": {
-          "y": {"field": "University_name", "type": "ordinal", "axis": null, "sort": "descending"},
-          "text": {"field": "University_name", "type": "nominal"}
-        }
-      },
-      {
-        "title": "Postgraduate",
-        "mark": "bar",
-        "encoding": {
-          "y": {
-            "field": "University_name",
-            "title": null,
-            "axis": null,
-            "sort": "descending"
-          },
-          "x": {
-            "aggregate": "sum",
-            "field": "PG_average_fees_(in_pounds)",
-            "title": "Average PG Fees",
-            "axis": {"format": "s"}
-          },
-          "color": {
-            "field": "University_name",
-            "scale": {"scheme": "category20c"},
-            "legend": null
-          }
+        "x": {
+          "aggregate": "sum",
+          "field": "UG_average_fees_(in_pounds)",
+          "title": "Average UG Fees",
+          "axis": {"format": "s"},
+          "sort": "descending"
+        },
+        "color": {
+          "field": "University_name",
+          "scale": {"scheme": "category20c"},
+          "legend": null
         }
       }
-    ],
-    "config": {
-      "view": {"stroke": null}
-      
+    },
+    {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {"field": "University_name", "type": "ordinal", "axis": null, "sort": "descending"},
+        "text": {"field": "University_name", "type": "nominal"}
+      }
+    },
+    {
+      "title": "Postgraduate",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "University_name",
+          "title": null,
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "PG_average_fees_(in_pounds)",
+          "title": "Average PG Fees",
+          "axis": {"format": "s"}
+        },
+        "color": {
+          "field": "University_name",
+          "scale": {"scheme": "category20c"},
+          "legend": null
+        }
+      }
     }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
   }
+}

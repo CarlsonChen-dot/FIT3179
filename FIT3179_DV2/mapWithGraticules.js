@@ -22,3 +22,8 @@ var vg_5 = "./js/interactive_scatterplot.json";
 vegaEmbed("#scatter", vg_5)
     .then(function (result) {})
     .catch(console.error);
+
+var vg_6 = "./js/pyramidchart.json";
+vegaEmbed("#pyramid", vg_6)
+    .then(function (result) {})
+    .catch(console.error);
