@@ -1,10 +1,79 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 450,
   "title": "Top-Ranked UK Universities",
+  "width": 800,
+  "height": 500,
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 2600,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 10000,
+        "step": 100,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [
+        -3,
+        54
+      ],
+      "bind": {
+        "input": "select",
+        "options": [
+          [
+            -3,
+            54
+          ],
+          [
+            -0.1278,
+            51.5074
+          ],
+          [
+            -2.244644,
+            53.483959
+          ],
+          [
+            -3.1883,
+            55.9533
+          ],
+          [
+            -6.26031,
+            53.349805
+          ],
+          [
+            -8.2439,
+            53.4129
+          ],
+          [
+            -1.8904,
+            52.4862
+          ]
+        ],
+        "labels": [
+          "United Kingdom",
+          "London",
+          "Manchester",
+          "Edinburgh",
+          "Dublin",
+          "Ireland",
+          "Birmingham"
+        ],
+        "name": "Map Centre: "
+      }
+    }
+  ],
   "projection": {
-    "type": "equalEarth"
+    "type": "equirectangular",
+    "center": {
+      "expr": "center_to"
+    },
+    "scale": {
+      "expr": "zoom_level"
+    }
   },
   "layer": [
     {
@@ -15,24 +84,17 @@
           "feature": "ne_10m_admin_1_states_provinces"
         }
       },
-      "mark": {
-        "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "floralwhite"
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179_DV2/main/FIT3179_DV2/js/UK_with_graticules.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_110m_graticules_30"
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' +datum.properties.NAME",
+          "as": "note"
         }
-      },
+      ],
       "mark": {
         "type": "geoshape",
-        "fill": null,
-        "stroke": "lightgray"
+        "fill": "#ddd",
+        "stroke": "floralwhite",
+        "strokeWidth": 1
       }
     },
     {
@@ -40,7 +102,8 @@
         "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
       },
       "mark": {
-        "type": "circle"
+        "type": "circle",
+        "size": 60
       },
       "encoding": {
         "longitude": {
@@ -87,5 +150,8 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    
+  }
 }
