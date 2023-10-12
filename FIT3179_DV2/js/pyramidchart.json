@@ -1,69 +1,106 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A pyramid-like chart comparing UG and PG average fees for different universities.",
+  "description": "Population pyramid-like visualization of UG and PG average fees for the top 10 universities.",
   "data": {
     "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
   },
-  "transform": [],
-  "spacing": 0,
   "hconcat": [
     {
-      "transform": [],
-      "title": "Undergraduate",
+      "data": {
+        "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+      },
+      "transform": [
+        {
+          "filter": {"field": "UK_rank", "lte": 10}
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "UG_average_fees_(in_pounds)",
+              "as": "total_UG_fees"
+            }
+          ],
+          "groupby": ["University_name"]
+        }
+      ],
       "mark": "bar",
+      "title": "Top 10 Universities in the UK",
       "encoding": {
         "y": {
           "field": "University_name",
-          "type": "ordinal",
+          "type": "nominal",
           "axis": null,
-          "sort": "descending"
+          "sort": {"field": "UK_rank", "order": "ascending"}
         },
         "x": {
-          "aggregate": "sum",
-          "field": "UG_average_fees_(in_pounds)",
-          "title": "Average UG Fees",
-          "axis": {"format": "s"},
+          "field": "total_UG_fees",
+          "type": "quantitative",
+          "title": "Total Average UG Fees",
           "sort": "descending"
-        },
-        "color": {
-          "field": "University_name",
-          "scale": {"scheme": "category20c"},
-          "legend": null
         }
       }
     },
     {
+      "data": {
+        "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+      },
       "width": 20,
       "view": {"stroke": null},
       "mark": {
         "type": "text",
         "align": "center"
       },
+      "transform": [
+        {
+          "filter": {"field": "UK_rank", "lte": 10}
+        }
+      ],
       "encoding": {
-        "y": {"field": "University_name", "type": "ordinal", "axis": null, "sort": "descending"},
-        "text": {"field": "University_name", "type": "nominal"}
+        "y": {
+          "field": "University_name",
+          "type": "ordinal",
+          "axis": null,
+          "sort": {"field": "UK_rank", "order": "ascending"}
+        },
+        "text": {
+          "field": "University_name",
+          "type": "nominal"
+        }
       }
     },
     {
-      "title": "Postgraduate",
+      "data": {
+        "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+      },
+      "transform": [
+        {
+          "filter": {"field": "UK_rank", "lte": 10}
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "PG_average_fees_(in_pounds)",
+              "as": "total_PG_fees"
+            }
+          ],
+          "groupby": ["University_name"]
+        }
+      ],
       "mark": "bar",
       "encoding": {
         "y": {
           "field": "University_name",
-          "title": null,
+          "type": "nominal",
           "axis": null,
-          "sort": "descending"
+          "sort": {"field": "UK_rank", "order": "ascending"}
         },
         "x": {
-          "aggregate": "sum",
-          "field": "PG_average_fees_(in_pounds)",
-          "title": "Average PG Fees",
-          "axis": {"format": "s"}
-        },
-        "color": {
-          "field": "University_name",
-          "scale": {"scheme": "category20c"},
-          "legend": null
+          "field": "total_PG_fees",
+          "type": "quantitative",
+          "title": "Total Average PG Fees",
+          "sort": "ascending"
         }
       }
     }
