@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Student Satisfaction Percentage Distribution",
+  "height": 300,
+  "width": 400,
+  "background": "transparent",
+  "data": {"url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"},
+  "transform": [
+    {
+      "calculate": "datum.Student_satisfaction_percentage * 100",
+      "as": "Student_satisfaction_percentage_scaled"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "bin": true,
+      "field": "Student_satisfaction_percentage_scaled",
+      "title": "Student"
+    },
+    "y": {"aggregate": "count"}
+  }
+}

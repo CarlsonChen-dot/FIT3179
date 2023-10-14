@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>TOP Universities in UK</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,46 +12,308 @@
     <script src="mapWithGraticules.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-    
+
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TOP Universities in UK</title>
 </head>
 
 <body>
-    <h1>Top Universities in the UK</h1>
-
-    <h2>Chart 1 Title</h2>
-    <p>Description of Chart 1</p>
-    <div id="symbol_map">
-
+    <div class="box-container">
+        <div id="title">
+            Best of British Education: Top UK Universities
+            <hr>
+            <p>In a world where education holds the key to future success, the <span class="highlight">United
+                    Kingdom</span> has carved a niche for
+                itself as a hub of academic excellence. The data collected from <span class="highlight">131
+                    universities</span> across the UK unveils a
+                compelling story of achievement and prestige, a story that unfolds in the hallowed halls of these top
+                institutions. Understanding each university's attributes is important to navigate the diverse landscape
+                of higher education. From <span class="highlight">ranking</span> to <span class="highlight">student
+                    satisfaction</span> and <span class="highlight">average fees</span>, each data
+                point contributes to the rich tapestry of academic achievement.</p>
+            <p>As we delve into this visual journey, we'll explore the remarkable universities that have consistently
+                set the gold standard for higher education, molding the minds of future leaders and innovators.</p>
+        </div>
     </div>
-    <div id="spaceline"></div>
-    <div id="spaceline"></div>
 
-    <div class="chart-container">
-        <div class="chart" id="top5">
+    <div class="box-container">
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id=title1>
+                    Geographic Overview
+                </div>
+                <div id="symbol_map"></div>
+                <div id="filter">
+                    Tweak the slider and dropdown menu view the map better.
+                </div>
+                <p>The symbol map visualizing the ranking of universities in the <span class="highlight">UK</span> is
+                    represented by a <span class="highlight">circle</span> symbol
+                    where each circle represents an individual university. These circles are strategically placed across
+                    the map to offer a geographical perspective, making it easy to identify the university's location.
+                    The intensity of color serves as a powerful indicator of its ranking, with the <span
+                        class="highlight">darker</span> shades
+                    signifying <span class="highlight">higher</span> ranks, thereby emphasizing the prestige and
+                    academic excellence of these
+                    institutions. On the other hand, <span class="highlight">lighter</span> colors highlight
+                    universities that, while not at the top,
+                    exhibit notable attributes and are on a <span class="highlight">trajectory toward higher
+                        rankings</span>.</p>
+                <p>As the visualization clearly illustrates, <span class="highlight">London</span> is the epicenter of
+                    academic excellence in the <span class="highlight">UK</span>,
+                    boasting the <span class="highlight">highest concentration of universities</span>. Within this
+                    vibrant city, you'll find <span class="highlight">three</span> of
+                    the country's top-tier educational institutions, making it a hotbed for cutting-edge learning and
+                    innovation.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div id="title1">Ranking</div>
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div id="top5">
+                </div>
+            </div>
+            <div class="pure-u-1-2">
+                <div id="bot5">
+                </div>
+            </div>
         </div>
 
-        <div class="chart" id="bot5">
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <p class="p1">The <span class="highlight">United Kingdom's</span> academic landscape is graced by a
+                    distinguished
+                    quintet of universities that
+                    consistently secure <span class="highlight">top</span> ranks, a testament to their unwavering
+                    commitment to excellence.
+                </p>
+                <p class="p1">
+                    Leading the
+                    way is the <span class="highlight">University of Cambridge</span>, a venerable institution renowned
+                    for its storied history and
+                    groundbreaking research. Not far behind, the <span class="highlight">University of Oxford</span>
+                    stands as a formidable
+                    intellectual powerhouse. In the charming town of St. Andrews, the <span class="highlight">University
+                        of St. Andrews</span> is
+                    celebrated for its world-class education and historic charm. <span class="highlight">Imperial
+                        College London</span> stands as a
+                    bastion of innovation, recognized for its pioneering research in science and technology.
+                </p>
+                <p class="p1">
+                    Lastly,
+                    <span class="highlight">Loughborough University</span>, with its impressive track record in sports
+                    science and engineering, rounds
+                    out this elite group of higher education institutions, contributing to the <span
+                        class="highlight">United Kingdom's</span> global
+                    academic acclaim.
+                </p>
+            </div>
+            <div class="pure-u-1-2">
+                <p class="p1">In contrast to the <span class="highlight">UK's</span> elite academic institutions, there
+                    are
+                    universities that, while striving for
+                    excellence, find themselves in the lower rankings. Among these institutions, the <span
+                        class="highlight">University of East
+                        London, University of Bedfordshire, University of Suffolk, Wrexham Glyndwr University, and
+                        Ravensbourne University London</span> occupy places in the <span class="highlight">bottom
+                        5</span>.
+                </p>
+                <p class="p1">
+                    These universities, while working
+                    diligently to provide quality education, have yet to attain the same level of recognition as their
+                    top-tier counterparts. <span class="highlight">However</span>, it's essential to note that <span
+                        class="highlight">every institution</span> plays a valuable role
+                    in the <span class="highlight">educational landscape</span>, and their dedication to growth and
+                    improvement remains unwavering.
+                    Each of these universities is a testament to the belief in the <span
+                        class="highlight">transformative power of education</span>,
+                    and they continue to evolve, with aspirations to climb the academic ranks in the future.
+                </p>
+            </div>
         </div>
+        <p>
+            Let's explore how well the United Kingdom is doing when it comes to international student enrollment and student satisfaction...
+        </p>
     </div>
 
-    
-    <h2>Chart 4 Title</h2>
-    <p>Description of Chart 4</p>
-    <div id="scatter">
-        
+
     </div>
 
-    
-    <h2>Chart 5 Title</h2>
-    <p>Description of Chart 5</p>
-    <div id="bubble">
-        
+    <div class="box-container">
+        <div id="title1">Evaluation</div>
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div id="pie"></div>
+
+            </div>
+            <div class="pure-u-1-2">
+                <p class="description-right">In the realm of <span class="highlight">international education</span>,
+                    <span class="highlight">London</span> stands as an extraordinary magnet for
+                    students from across the globe. This vibrant and diverse metropolis boasts a remarkable <span
+                        class="highlight">486.29%</span> of
+                    <span class="highlight">international students</span>, a figure that defies the boundaries of
+                    conventional statistics.
+                </p>
+                <p class="description-right">
+                    It's a
+                    testament to the city's unrivaled appeal and the wealth of opportunities it offers to students
+                    seeking an <span class="highlight">international academic experience</span>. <span
+                        class="highlight">London's</span> ability to welcome and nurture talent from
+                    every corner of the world speaks to its global reputation as a hub of knowledge, culture, and
+                    innovation.
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <p class="description-left">The <span class="highlight">student satisfaction percentage</span>
+                    distribution histogram paints an
+                    insightful picture of the collective sentiment among students. Within this histogram, it's evident
+                    that a substantial <span class="highlight">majority of students</span> fall within the <span
+                        class="highlight">middle bar</span>, where <span class="highlight">satisfaction levels</span>
+                    range
+                    from <span class="highlight">75%</span> to <span class="highlight">80%</span>.
+                </p>
+                <p class="description-left">
+                    This central peak reflects the consistent contentment experienced by a <span
+                        class="highlight">significant
+                        portion of the student body</span>, showcasing the universities' dedication to providing a <span
+                        class="highlight">high-quality
+                        educational experience</span>. While there may be variations in satisfaction across
+                    institutions, the
+                    <span class="highlight">overarching trend</span> indicates a <span class="highlight">harmonious
+                        balance</span> between academic support, campus life, and overall
+                    well-being, ensuring that students' educational journeys are enriched with fulfillment.
+                </p>
+
+            </div>
+            <div class="pure-u-1-2">
+                <div id="histo"></div>
+            </div>
+        </div>
+        <p>
+            Curious about the ranking calculation and the average fees for undergraduate and postgraduate programs?...
+        </p>
     </div>
 
-    <h2>Chart 6 Title</h2>
-    <p>Description of Chart 6</p>
-    <div id="pyramid">
-        
+    <div class="box-container">
+        <div id="title1">Analysis & Comparison</div>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="scatter"></div>
+                <div id="filter2">
+                    Click on the color to select and filter the region of your preference.
+                </div>
+                <br>
+                <p>In the interactive scatterplot above that depicts the relationship between <span
+                        class="highlight">CWUR scores</span> and <span class="highlight">UK rankings</span>, a
+                    compelling
+                    narrative emerges. These two factors share a complex and <span class="highlight">intertwined
+                        connection</span> that goes beyond
+                    surface-level statistics. The <span class="highlight">CWUR score</span>, a reflection of <span
+                        class="highlight">world university rankings</span>, provides
+                    insight into the global standing of <span class="highlight">UK</span> universities. As this score
+                    fluctuates, it often corresponds
+                    to changes in the <span class="highlight">UK rankings</span>.
+                </p>
+                <p>
+                    <span class="highlight">However</span>, it's important to note that a <span class="highlight">higher
+                        CWUR score doesn't
+                        guarantee a higher UK ranking</span>. The reason behind this complex relationship lies in the
+                    intricacies
+                    of ranking methodologies. While the <span class="highlight">CWUR score</span> emphasizes research
+                    excellence, academic reputation,
+                    and other global factors, <span class="highlight">UK rankings</span> consider additional regional
+                    and institutional-specific
+                    criteria. Factors like <span class="highlight">student satisfaction, employability, and the
+                        universities' contribution</span> to
+                    local communities play a substantial role in shaping <span class="highlight">UK rankings</span>.
+                </p>
+                <p>
+                    Consequently, universities may
+                    perform exceptionally well on the world stage but not see a direct translation of that performance
+                    into their <span class="highlight">UK rankings</span>. This interplay highlights the
+                    multidimensional nature of university
+                    rankings, where <span class="highlight">academic performance on the global stage</span> is
+                    inextricably linked to <span class="highlight">local recognition
+                        and prestige</span>, and where a nuanced blend of global and local considerations shapes the
+                    rankings
+                    landscape.
+                </p>
+                <p>
+                    Continuing from the international student pie chart, another interesting feature in the interactive
+                    bar chart is that <span class="highlight">London</span> also
+                    boasts the <span class="highlight">highest number of universities</span> in the <span
+                        class="highlight">UK</span>. This prominence is attributed to several
+                    factors that make the city a veritable education hub. <span class="highlight">London's</span>
+                    cultural diversity, dynamic job
+                    market, and a rich history of academic tradition have consistently attracted institutions and
+                    students from around the world.
+                </p>
+                <br>
+                <hr>
+            </div>
+
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="pyramid"></div>
+
+            </div>
+            <div class="pure-u-1-1">
+                <p>The <span class="highlight">average undergraduate and postgraduate fees</span> of the <span
+                        class="highlight">top 10 UK universities</span> are a reflection of a
+                    dynamic and multi-faceted educational landscape. These institutions, renowned for their academic
+                    excellence, exhibit variations in their fee structures.
+                </p>
+                <p>
+                    Factors that contribute to these differences
+                    include the reputation and <span class="highlight">global standing</span> of the universities,
+                    especially in the <span class="highlight">UK</span> where it is known for its <span
+                        class="highlight">academic excellence</span> in the industry, the specific courses and programs
+                    offered, and the cost of living in the region. Among these prestigious institutions, <span
+                        class="highlight">Imperial
+                        College London</span> stands out with the highest fees for both <span
+                        class="highlight">undergraduate and postgraduate</span> studies.
+                    <span class="highlight">Imperial's</span> distinguished reputation in science, engineering, and
+                    medicine, along with its location
+                    in <span class="highlight">London</span>, a city known for its elevated cost of living, justifies
+                    these higher fees.
+                </p>
+                <p>
+                    Top-tier
+                    universities with a <span class="highlight">strong global presence</span> often command higher fees,
+                    as they attract a diverse pool
+                    of students seeking a <span class="highlight">world-class</span> education. The types of programs
+                    offered, such as those in
+                    science, technology, engineering, and mathematics (STEM) fields, often come with higher tuition
+                    costs due to the resources and equipment required for these disciplines. <span
+                        class="highlight">Additionally</span>, the <span class="highlight">location</span>
+                    of the university can <span class="highlight">significantly</span> impact fees, as universities
+                    situated in <span class="highlight">cities</span> with a <span class="highlight">higher
+                        cost of living</span> may charge more to account for the expenses associated with student
+                    living.
+                </p>
+                <p>
+                    While there are notable variations in the average fees among the <span class="highlight">top 10 UK universities</span>, it's
+                    interesting to observe that, on the whole, many of these esteemed institutions strive to maintain
+                    competitive and relatively <span class="highlight">similar fee structures</span>. Despite differences in reputation, program
+                    offerings, and locations, universities within this elite group share a commitment to providing
+                    <span class="highlight">accessible and quality education</span> to a diverse array of students. This <span class="highlight">balance</span> between <span class="highlight">academic
+                        excellence</span> and <span class="highlight">affordability</span> underlines the enduring appeal of higher education in the <span class="highlight">United
+                            Kingdom</span> and emphasizes the nation's dedication to nurturing the intellectual growth and development
+                    of both its <span class="highlight">domestic and international</span> student populations.
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 

@@ -1,34 +1,174 @@
-body *{
-    font-family: 'Open Sans', sans-serif;
-    
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(245, 250, 245) !important;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    width: 75% !important;
+}
+
+body {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.highlight {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+#title {
+    font-family: "Georgia", serif;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #3e3438;
+    text-align: center;
+}
+
+#title1 {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Georgia", serif;
+    font-size: 30px;
+    color: #3e3438;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#filter {
+    margin-top: 15px;
+    margin-left: 170px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+#filter2 {
+    margin-top: 15px;
+    margin-left: 263px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Gluten", cursive;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 70px;
+    line-height: 1.5;
+}
+
+.p1 {
+    font-family: "Gluten", cursive;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+    text-align: left;
+    margin-left: 45px;
+    margin-right: 45px;
+    line-height: 1.5;
+}
+
+.description-right {
+    font-family: "Gluten", cursive;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+    text-align: left;
+    margin-left: 45px;
+    margin-right: 35px;
+    line-height: 1.5;
+}
+
+.description-left {
+    font-family: "Gluten", cursive;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+    text-align: left;
+    margin-left: 45px;
+    margin-right: 40px;
+    line-height: 1.5;
+}
+
+hr {
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+
+
+#symbol_map {
+    width: 100%;
+    margin-left: 170px;
+}
+
+#top5 {
+    width: 100%;
+    margin-left: 20px;
+}
+
+#bot5 {
+    width: 100%;
+    margin-right: 20px;
+}
+
+#pie {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#histo {
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#scatter {
+    width: 100%;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+#pyramid {
+    width: 100%;
+    margin-left: 235px;
+    margin-top: 20px;
 }
 
 h1 {
-    font-weight: 900;
+    font-weight: bold;
     text-align: center;
+    font-family: "Georgia", serif;
+    font-size: 30px;
+
 }
 
 h2 {
     font-weight: 700;
     text-align: center;
 }
+
 #spaceline {
     height: 20px;
-    width: 100%; 
-    background-color: transparent; 
-    border: none; 
-}
-
-body {
-    background-color: lightblue;
-    display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-    
-    
+    width: 100%;
+    background-color: transparent;
+    border: none;
 }
 
 .page {
@@ -40,7 +180,7 @@ body {
 }
 
 .vis-container {
-    width: 100%;
+    width: 50%;
 }
 
 .description h2,
@@ -48,13 +188,6 @@ h1 {
     margin-top: 0px;
 }
 
-.description-right {
-    padding-left: 20px;
-}
-
-.description-left {
-    padding-right: 20px;
-}
 
 .pure-g {
     margin-bottom: 40px;
@@ -64,12 +197,11 @@ h1 {
     font-size: 14px;
 }
 
-.chart-container {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .chart {
-    width: 48%; /* Adjust the width as needed */
-    margin-right: 1%; /* Add some spacing between charts */
+    width: 48%;
+    /* Adjust the width as needed */
+    margin-right: 1%;
+    /* Add some spacing between charts */
 }

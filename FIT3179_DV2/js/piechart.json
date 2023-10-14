@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "International Students Percentage by Region",
+  "height": 200,
+  "width": 350,
+  "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Region != null"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "International_students_percentage",
+          "as": "total_percentage"
+        }
+      ],
+      "groupby": [
+        "Region"
+      ]
+    }
+  ],
+  "mark": "arc",
+  "encoding": {
+    "theta": {
+      "field": "total_percentage",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Region",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Region",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "total_percentage",
+        "type": "quantitative",
+        "format": ".2%",
+        "title": "International Students Percentage"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}

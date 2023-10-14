@@ -1,6 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "UK Rank vs. CWUR Score",
+    "title": {
+        "text": "UK Rank vs. CWUR Score",
+        "anchor": "middle"},
+    "background": "transparent",
     "data": {
         "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
     },
@@ -90,6 +93,7 @@
                     },
                     "type": "quantitative"
                 }
+
             },
             "width": 600,
             "height": 400,

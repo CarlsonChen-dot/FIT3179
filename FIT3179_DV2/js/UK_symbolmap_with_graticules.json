@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top-Ranked UK Universities",
+  
   "background": "transparent",
   "width": 800,
   "height": 500,
@@ -120,11 +120,9 @@
           "type": "quantitative",
           "title": "UK Ranking",
           "scale": {
-            "scheme": "reds",
-            "domain": [
-              131,
-              1
-            ]
+            "type": "linear",
+            "domain": [1, 131], 
+            "range": ["#124019", "#AFE9B8"] 
           }
         },
         "tooltip": [

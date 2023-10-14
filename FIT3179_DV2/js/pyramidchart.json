@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Population pyramid-like visualization of UG and PG average fees for the top 10 universities.",
+  "background": "transparent",
+  "title": {"text":"Average Undergraduate and Postgraduate Fees of Top 10 UK Universities","anchor": "middle"},
   "data": {
     "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
   },
@@ -25,7 +26,6 @@
         }
       ],
       "mark": "bar",
-      "title": "Top 10 Universities in the UK",
       "encoding": {
         "y": {
           "field": "University_name",
@@ -36,7 +36,7 @@
         "x": {
           "field": "total_UG_fees",
           "type": "quantitative",
-          "title": "Total Average UG Fees",
+          "title": "Undergraduate Fees",
           "sort": "descending"
         }
       }
@@ -99,7 +99,7 @@
         "x": {
           "field": "total_PG_fees",
           "type": "quantitative",
-          "title": "Total Average PG Fees",
+          "title": "Postgraduate Fees",
           "sort": "ascending"
         }
       }
