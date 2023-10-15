@@ -199,19 +199,6 @@ hr {
     margin-top: 20px;
 }
 
-h1 {
-    font-weight: bold;
-    text-align: center;
-    font-family: "Georgia", serif;
-    font-size: 30px;
-
-}
-
-h2 {
-    font-weight: 700;
-    text-align: center;
-}
-
 #spaceline {
     height: 20px;
     width: 100%;
@@ -219,37 +206,6 @@ h2 {
     border: none;
 }
 
-.page {
-    width: 850px;
-    background-color: white;
-    margin: auto;
-    padding: 50px;
-    padding-top: 35px;
-}
-
-.vis-container {
-    width: 50%;
-}
-
-.description h2,
-h1 {
-    margin-top: 0px;
-}
-
-
 .pure-g {
     margin-bottom: 40px;
-}
-
-.small-font {
-    font-size: 14px;
-}
-
-
-
-.chart {
-    width: 48%;
-    /* Adjust the width as needed */
-    margin-right: 1%;
-    /* Add some spacing between charts */
 }

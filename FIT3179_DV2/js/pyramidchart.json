@@ -1,7 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "background": "transparent",
-  "title": {"text":"Average Undergraduate and Postgraduate Fees of Top 10 UK Universities","anchor": "middle"},
+  "title": {
+    "text": "Average Undergraduate and Postgraduate Fees of Top 10 UK Universities",
+    "anchor": "middle"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
   },
@@ -12,7 +15,10 @@
       },
       "transform": [
         {
-          "filter": {"field": "UK_rank", "lte": 10}
+          "filter": {
+            "field": "UK_rank",
+            "lte": 10
+          }
         },
         {
           "aggregate": [
@@ -22,7 +28,9 @@
               "as": "total_UG_fees"
             }
           ],
-          "groupby": ["University_name"]
+          "groupby": [
+            "University_name"
+          ]
         }
       ],
       "mark": "bar",
@@ -31,7 +39,10 @@
           "field": "University_name",
           "type": "nominal",
           "axis": null,
-          "sort": {"field": "UK_rank", "order": "ascending"}
+          "sort": {
+            "field": "UK_rank",
+            "order": "ascending"
+          }
         },
         "x": {
           "field": "total_UG_fees",
@@ -56,14 +67,19 @@
         "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
       },
       "width": 20,
-      "view": {"stroke": null},
+      "view": {
+        "stroke": null
+      },
       "mark": {
         "type": "text",
         "align": "center"
       },
       "transform": [
         {
-          "filter": {"field": "UK_rank", "lte": 10}
+          "filter": {
+            "field": "UK_rank",
+            "lte": 10
+          }
         }
       ],
       "encoding": {
@@ -71,7 +87,10 @@
           "field": "University_name",
           "type": "ordinal",
           "axis": null,
-          "sort": {"field": "UK_rank", "order": "ascending"}
+          "sort": {
+            "field": "UK_rank",
+            "order": "ascending"
+          }
         },
         "text": {
           "field": "University_name",
@@ -85,7 +104,10 @@
       },
       "transform": [
         {
-          "filter": {"field": "UK_rank", "lte": 10}
+          "filter": {
+            "field": "UK_rank",
+            "lte": 10
+          }
         },
         {
           "aggregate": [
@@ -95,7 +117,9 @@
               "as": "total_PG_fees"
             }
           ],
-          "groupby": ["University_name"]
+          "groupby": [
+            "University_name"
+          ]
         }
       ],
       "mark": "bar",
@@ -104,7 +128,10 @@
           "field": "University_name",
           "type": "nominal",
           "axis": null,
-          "sort": {"field": "UK_rank", "order": "ascending"}
+          "sort": {
+            "field": "UK_rank",
+            "order": "ascending"
+          }
         },
         "x": {
           "field": "total_PG_fees",
@@ -126,7 +153,8 @@
     }
   ],
   "config": {
-    "view": {"stroke": null}
-    
+    "view": {
+      "stroke": null
+    }
   }
 }

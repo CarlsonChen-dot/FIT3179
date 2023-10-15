@@ -9,8 +9,18 @@
   },
   "transform": [
     {
-      "window": [{"op": "rank", "as": "rank"}],
-      "sort": [{"field": "UK_rank", "order": "ascending"}]
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "UK_rank",
+          "order": "ascending"
+        }
+      ]
     },
     {
       "calculate": "datum.UK_rank",
@@ -31,7 +41,13 @@
       "field": "University_name",
       "type": "nominal",
       "title": "",
-      "sort": ["University of Cambridge", "University of Oxford", "University of St Andrews", "Imperial College London", "Loughborough University"]
+      "sort": [
+        "University of Cambridge",
+        "University of Oxford",
+        "University of St Andrews",
+        "Imperial College London",
+        "Loughborough University"
+      ]
     }
   },
   "layer": [
@@ -43,8 +59,16 @@
       },
       "encoding": {
         "tooltip": [
-          { "field": "University_name", "type": "nominal", "title": "University Name" },
-          { "field": "UK_rank", "type": "quantitative", "title": "UK Ranking" }
+          {
+            "field": "University_name",
+            "type": "nominal",
+            "title": "University Name"
+          },
+          {
+            "field": "UK_rank",
+            "type": "quantitative",
+            "title": "UK Ranking"
+          }
         ]
       }
     },
@@ -57,11 +81,16 @@
         "color": "black"
       },
       "encoding": {
-        "text": { "field": "UK_rank", "type": "quantitative" }
+        "text": {
+          "field": "UK_rank",
+          "type": "quantitative"
+        }
       }
     }
   ],
   "config": {
-    "view": { "stroke": null }
+    "view": {
+      "stroke": null
+    }
   }
 }

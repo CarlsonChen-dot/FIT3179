@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  
   "background": "transparent",
   "width": 800,
   "height": 500,
@@ -121,8 +120,14 @@
           "title": "UK Ranking",
           "scale": {
             "type": "linear",
-            "domain": [1, 131], 
-            "range": ["#124019", "#AFE9B8"] 
+            "domain": [
+              1,
+              131
+            ],
+            "range": [
+              "#124019",
+              "#AFE9B8"
+            ]
           }
         },
         "tooltip": [
@@ -152,10 +157,10 @@
   ],
   "config": {
     "view": {
-      "stroke": "transparent" 
+      "stroke": "transparent"
     },
     "axis": {
-      "grid": false 
+      "grid": false
     }
   }
 }

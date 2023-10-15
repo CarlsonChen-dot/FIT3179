@@ -4,18 +4,30 @@
   "height": 200,
   "background": "transparent",
   "title": "Bottom 5 Universities Ranking",
-  "data": {"url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+  },
   "transform": [
     {
-      "window": [{"op": "rank", "as": "rank"}],
-      "sort": [{"field": "UK_rank", "order": "ascending"}]
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "UK_rank",
+          "order": "ascending"
+        }
+      ]
     },
     {
       "calculate": "datum.UK_rank",
       "as": "reverse_rank"
     },
     {
-      "filter": "datum.reverse_rank >=127" 
+      "filter": "datum.reverse_rank >=127"
     }
   ],
   "encoding": {
@@ -23,13 +35,18 @@
       "field": "UK_rank",
       "type": "quantitative",
       "title": "UK ranking",
-      "axis" : null
-      
+      "axis": null
     },
     "y": {
       "field": "University_name",
       "type": "nominal",
-      "sort": ["Ravensbourne University London", "Wrexham Glyndwr University", "University of Suffolk", "University of Bedfordshire", "University of East London"],
+      "sort": [
+        "Ravensbourne University London",
+        "Wrexham Glyndwr University",
+        "University of Suffolk",
+        "University of Bedfordshire",
+        "University of East London"
+      ],
       "title": ""
     }
   },
@@ -42,8 +59,16 @@
       },
       "encoding": {
         "tooltip": [
-          { "field": "University_name", "type": "nominal", "title": "University Name" },
-          { "field": "UK_rank", "type": "quantitative", "title": "UK Ranking" }
+          {
+            "field": "University_name",
+            "type": "nominal",
+            "title": "University Name"
+          },
+          {
+            "field": "UK_rank",
+            "type": "quantitative",
+            "title": "UK Ranking"
+          }
         ]
       }
     },
@@ -56,12 +81,16 @@
         "color": "black"
       },
       "encoding": {
-        "text": {"field": "UK_rank", "type": "quantitative"}
+        "text": {
+          "field": "UK_rank",
+          "type": "quantitative"
+        }
       }
     }
   ],
   "config": {
-    "view": {"stroke": null}
-    
+    "view": {
+      "stroke": null
+    }
   }
 }
