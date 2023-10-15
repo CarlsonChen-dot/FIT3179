@@ -18,6 +18,9 @@
       "field": "Student_satisfaction_percentage_scaled",
       "title": "Student"
     },
-    "y": {"aggregate": "count"}
+    "y": {"aggregate": "count"},
+    "color":{
+      "value": "#69b3a2"
+    }
   }
 }

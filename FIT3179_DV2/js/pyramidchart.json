@@ -38,7 +38,17 @@
           "type": "quantitative",
           "title": "Undergraduate Fees",
           "sort": "descending"
-        }
+        },
+        "color": {
+          "value": "#026edb"
+        },
+        "tooltip": [
+          {
+            "field": "total_UG_fees",
+            "type": "quantitative",
+            "title": "Undergraduate Fees in Pounds"
+          }
+        ]
       }
     },
     {
@@ -101,12 +111,22 @@
           "type": "quantitative",
           "title": "Postgraduate Fees",
           "sort": "ascending"
-        }
+        },
+        "color": {
+          "value": "#013d79"
+        },
+        "tooltip": [
+          {
+            "field": "total_PG_fees",
+            "type": "quantitative",
+            "title": "Postgraduate Fees in Pounds"
+          }
+        ]
       }
     }
   ],
   "config": {
-    "view": {"stroke": null},
-    "axis": {"grid": false}
+    "view": {"stroke": null}
+    
   }
 }

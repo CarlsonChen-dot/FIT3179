@@ -4,7 +4,9 @@
   "height": 200,
   "background": "transparent",
   "title": "Top 5 Universities Ranking",
-  "data": {"url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/CarlsonChen-dot/FIT3179/main/FIT3179_DV2/data/uk_universities.csv"
+  },
   "transform": [
     {
       "window": [{"op": "rank", "as": "rank"}],
@@ -15,7 +17,7 @@
       "as": "rank"
     },
     {
-      "filter": "datum.rank <= 5" 
+      "filter": "datum.rank <= 5"
     }
   ],
   "encoding": {
@@ -23,8 +25,7 @@
       "field": "UK_rank",
       "type": "quantitative",
       "title": "UK ranking",
-      "axis" : null
-      
+      "axis": null
     },
     "y": {
       "field": "University_name",
@@ -38,7 +39,13 @@
       "mark": {
         "type": "bar",
         "size": 30,
-        "color": "green"
+        "color": "#115f1d"
+      },
+      "encoding": {
+        "tooltip": [
+          { "field": "University_name", "type": "nominal", "title": "University Name" },
+          { "field": "UK_rank", "type": "quantitative", "title": "UK Ranking" }
+        ]
       }
     },
     {
@@ -50,12 +57,11 @@
         "color": "black"
       },
       "encoding": {
-        "text": {"field": "UK_rank", "type": "quantitative"}
+        "text": { "field": "UK_rank", "type": "quantitative" }
       }
     }
   ],
   "config": {
-    "view": {"stroke": null}
-    
+    "view": { "stroke": null }
   }
 }

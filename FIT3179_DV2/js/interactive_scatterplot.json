@@ -34,17 +34,17 @@
                             "range": [
                                 "#1f77b4",
                                 "#ff7f0e",
+                                "#ff0000",
                                 "#2ca02c",
-                                "#d62728",
                                 "#9467bd",
                                 "#8c564b",
                                 "#e377c2",
                                 "#7f7f7f",
                                 "#bcbd22",
                                 "#17becf",
-                                "#ff0000",
+                                "#d62728",
                                 "#0000ff"
-                            ]
+                              ]
                         }
                     },
                     "value": "lightgray"
@@ -133,7 +133,19 @@
                 "y": {
                     "title": "Region",
                     "field": "Region"
-                }
+                },
+                "tooltip": [
+                    {
+                        "field": "Region",
+                        "type": "nominal"
+                    },
+                    {
+                        "aggregate": "count",
+                        "field": "*",
+                        "type": "quantitative",
+                        "title": "Number of Universities"
+                    }
+                ]
             },
             "width": 600,
             "height": 150,

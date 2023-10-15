@@ -38,7 +38,13 @@
       "mark": {
         "type": "bar",
         "size": 30,
-        "color": "red"
+        "color": "#AFE9B8"
+      },
+      "encoding": {
+        "tooltip": [
+          { "field": "University_name", "type": "nominal", "title": "University Name" },
+          { "field": "UK_rank", "type": "quantitative", "title": "UK Ranking" }
+        ]
       }
     },
     {

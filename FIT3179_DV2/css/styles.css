@@ -10,6 +10,19 @@
     width: 75% !important;
 }
 
+.end-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(245, 250, 245) !important;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 75% !important;
+}
+
 body {
     background-color: lightgrey;
     display: flex;
@@ -22,6 +35,31 @@ body {
 
 .highlight {
     color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.highlight-low-rank {
+    color: #AFE9B8;
+    font-weight: bolder;
+}
+
+.highlight-high-rank {
+    color: #0b6f18;
+    font-weight: bolder;
+}
+
+.highlight-region {
+    color: #d62728;
+    font-weight: bolder;
+}
+
+.highlight-percentage {
+    color: #69b3a2;
+    font-weight: bolder;
+}
+
+.highlight-UK {
+    color: #c99a25;
     font-weight: bolder;
 }
 
@@ -101,6 +139,16 @@ p {
     margin-left: 45px;
     margin-right: 40px;
     line-height: 1.5;
+}
+
+.reference {
+    font-family: "Gluten", cursive;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 hr {
